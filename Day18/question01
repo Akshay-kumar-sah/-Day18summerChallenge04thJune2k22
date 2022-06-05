@@ -1,0 +1,26 @@
+Question 01 : LeetCode 162 Find Peak Element
+Solution :
+class Solution {
+    public int findPeakElement(int[] nums) {
+        
+       // int res=0,ans=0;
+     
+        
+        int s=0,e=nums.length-1;
+        while(e>s){
+            
+            int mid =s+(e-s)/2;
+          if(nums[mid]>nums[mid+1]){
+              e=mid;
+          }else{
+              s=mid+1;
+          }
+            
+            
+        }
+        
+        
+        return s;
+        
+    }
+}
